@@ -7,7 +7,7 @@ using System.Text;
 namespace Nukepayload2.RuntimeExtensions.InteropServices
 {
     /// <summary>
-    /// Make Visual Basic codes accessible to unsafe members of runtime types. This standard module is designed for Visual Basic and not intended to use in C# or F#.
+    /// Make Visual Basic codes accessible to unsafe members of bcl types. This standard module is designed for Visual Basic and not intended to use in C# or F#.
     /// </summary>
     [StandardModule, HideModuleName]
     public static class Extensions

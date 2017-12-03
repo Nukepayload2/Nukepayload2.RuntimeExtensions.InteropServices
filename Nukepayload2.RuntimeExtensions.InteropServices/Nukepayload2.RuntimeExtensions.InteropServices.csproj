@@ -8,7 +8,8 @@
     <Version>1.0.0-beta1</Version>
     <Description>Includes helper classes to write unsafe code in Visual Basic.</Description>
     <Copyright>Copyright 2017 Nukepayload2</Copyright>
-    <PackageReleaseNotes>First pre-release.</PackageReleaseNotes>
+    <PackageReleaseNotes>First pre-release.
+Make Visual Basic codes accessible to unsafe members of bcl types.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
