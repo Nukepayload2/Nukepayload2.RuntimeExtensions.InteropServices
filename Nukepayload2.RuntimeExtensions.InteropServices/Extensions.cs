@@ -36,28 +36,30 @@ namespace Nukepayload2.RuntimeExtensions.InteropServices
         /// <summary>
         /// Calculates the length of decoded buffer in bytes.
         /// </summary>
-        public static unsafe int GetByteCount(this Encoding encoding, IntPtr chrPtr, int charCount)
+        public static unsafe int DangerousGetByteCount(this Encoding encoding, IntPtr chrPtr, int charCount)
         {
             return encoding.GetByteCount((char*)chrPtr, charCount);
         }
         /// <summary>
         /// Decodes characters in the specified buffer to another buffer.
         /// </summary>
-        public static unsafe int GetBytes(this Encoding encoding, IntPtr chrPtr, int charCount, IntPtr outBuffer, int outBufferLength)
+        /// <returns>Number of bytes written.</returns>
+        public static unsafe int DangerousGetBytes(this Encoding encoding, IntPtr chrPtr, int charCount, IntPtr outBuffer, int outBufferLength)
         {
             return encoding.GetBytes((char*)chrPtr, charCount, (byte*)outBuffer, outBufferLength);
         }
         /// <summary>
         /// Calculates the count of encoded characters.
         /// </summary>
-        public static unsafe int GetCharCount(this Encoding encoding, IntPtr ptr, int length)
+        public static unsafe int DangerousGetCharCount(this Encoding encoding, IntPtr ptr, int length)
         {
             return encoding.GetCharCount((byte*)ptr, length);
         }
         /// <summary>
         /// Encodes raw bytes in the specified buffer to a buffer of characters.
         /// </summary>
-        public static unsafe int GetChars(this Encoding encoding, IntPtr ptr, int length, IntPtr outChars, int outCharsCount)
+        /// <returns>Number of chars written.</returns>
+        public static unsafe int DangerousGetChars(this Encoding encoding, IntPtr ptr, int length, IntPtr outChars, int outCharsCount)
         {
             return encoding.GetChars((byte*)ptr, length, (char*)outChars, outCharsCount);
         }

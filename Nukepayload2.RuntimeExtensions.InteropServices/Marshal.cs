@@ -5,7 +5,7 @@ using System.Security;
 namespace Nukepayload2.RuntimeExtensions.InteropServices
 {
     /// <summary>
-    /// Provides helper methods for creating objects with unsafe manner. This class is designed for Visual Basic and not intended to use in C# or F#.
+    /// Provides helper methods for creating objects in unsafe manner. This class is designed for Visual Basic and not intended to use in C# or F#.
     /// </summary>
     public static class Marshal
     {
@@ -38,21 +38,21 @@ namespace Nukepayload2.RuntimeExtensions.InteropServices
             return new UnmanagedMemoryStream((byte*)ptr, length, capacity, access);
         }
         /// <summary>
-        /// Creates a <see cref="string"/> from unmanaged memory.
+        /// Creates a <see cref="string"/> from unmanaged memory which contains a null-terminated UTF-16 string.
         /// </summary>
         public static unsafe string UnsafeCreateNullTerminatedString(IntPtr chrPtr)
         {
             return new string((char*)chrPtr);
         }
         /// <summary>
-        /// Creates a <see cref="string"/> from unmanaged memory.
+        /// Creates a <see cref="string"/> from unmanaged memory which contains a UTF-16 string.
         /// </summary>
         public static unsafe string UnsafeCreateString(IntPtr chrPtr, int startIndex, int charCount)
         {
             return new string((char*)chrPtr, startIndex, charCount);
         }
         /// <summary>
-        /// Creates a <see cref="SecureString"/> from unmanaged memory.
+        /// Creates a <see cref="SecureString"/> from unmanaged memory which contains a UTF-16 string.
         /// </summary>
         public static unsafe SecureString UnsafeCreateSecureString(IntPtr chrPtr, int charCount)
         {
