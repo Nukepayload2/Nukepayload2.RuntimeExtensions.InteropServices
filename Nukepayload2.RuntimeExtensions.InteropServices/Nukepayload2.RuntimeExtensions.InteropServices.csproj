@@ -10,6 +10,8 @@
     <Copyright>Copyright 2017 Nukepayload2</Copyright>
     <PackageReleaseNotes>First pre-release.
 Make Visual Basic codes accessible to unsafe members of bcl types.</PackageReleaseNotes>
+    <RepositoryUrl></RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Nukepayload2/Nukepayload2.RuntimeExtensions.InteropServices</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
